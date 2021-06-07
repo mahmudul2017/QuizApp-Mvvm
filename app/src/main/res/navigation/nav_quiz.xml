@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.gorentalbd.quizapp.view.QuizFragment"
+        android:label="Game Fragment"
+        tools:layout="@layout/fragment_quiz">
+
+        <action
+            android:id="@+id/action_gameFragment_to_scoreFramgent"
+            app:destination="@id/scoreFramgent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.gorentalbd.quizapp.view.SplashFragment"
+        android:label="Title Fragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_game_to_score"
+            app:destination="@id/gameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scoreFramgent"
+        android:name="com.gorentalbd.quizapp.view.ScoreFragment"
+        android:label="Score Fragment"
+        tools:layout="@layout/fragment_score">
+
+        <action
+            android:id="@+id/action_restart"
+            app:destination="@id/gameFragment" />
+
+        <argument
+            android:name="score"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>
