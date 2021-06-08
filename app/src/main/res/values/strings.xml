@@ -9,5 +9,7 @@
     <string name="get_ready">Get ready to</string>
     <string name="got_it">Got it</string>
     <string name="end_game">End game</string>
+    <string name="view_answer">View Answer</string>
+    <string name="show_answer">Show Answer</string>
     <string name="word_is">The word is…</string>
 </resources>

@@ -19,7 +19,7 @@ class SplashFragment : Fragment() {
         val play: Button = view.findViewById(R.id.play_game_button)
 
         play.setOnClickListener {
-            findNavController().navigate(TitleFragmentDirections.actionGameToScore())
+            findNavController().navigate(SplashFragmentDirections.actionGameToScore())
         }
 
         return view
